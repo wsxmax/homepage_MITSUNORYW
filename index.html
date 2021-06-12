@@ -1,0 +1,94 @@
+<! doctype html>
+<html>
+<head>
+  <meta charset = "UTF-8" >
+  <meta name = "viewport" content = "width=device-width initial-scale=1.0">
+  <title>
+    Homepage Mitsunoryw
+  </title>
+</head>
+<style>
+  html{
+    height : 100%;
+  }
+  body{
+    width : 100%;
+    height : 100%;
+    margin : 0px;
+    background-position : right top;
+    background-size : cover;
+  }
+  .navigationBar{
+    display : flex;
+    justify-content : space-between;
+    padding : 50px;
+  }
+  .mainLogoContainer{
+    width : 200px;
+  }
+  .menuContainer{
+    color : white;
+    display : flex;
+    justify-content : flex-end;
+  }
+  .menuButton, .terminalInputContainer{
+    margin : auto 70 0;
+    font-family : "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  }
+  .mainTitleContainer{
+    width : 200px;
+    height : 200px;
+    position : absolute;
+    left : 10%;
+    bottom: 20%;
+    display : flex;
+    color : white;
+  }
+  .mainTitleTextFrame{
+    margin-left : 20px;
+    vertical-align : top;
+    font-family : "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  }
+  .mainTitleFrame{
+      font-family : "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      font-size : 65px;
+    }
+</style>
+<body background = "/resources/background.jpg">
+  <div class="navigationBar">
+    <div class="mainLogoContainer">
+      <img src="resources/mainLogo.png" alt="" width="200px">
+    </div>
+    <div class="menuContainer">
+      <div class="menuButton" id="gallery">
+        GALLERY
+      </div>
+      <div class="menuButton" id="resources">
+        RESOURCES
+      </div>
+      <div class="menuButton" id="contact">
+        CONTACT
+      </div>
+      <div class="terminalInputContainer">
+        <input type="text" name="terminalInput" value="" style = "border-radius: 10px;">
+      </div>
+    </div>
+  </div>
+  <div class="mainTitleContainer">
+    <div class="mainTitleLogoContainer">
+      <img src="resources/illustrationLogo.png" alt="" width="200px">
+    </div>
+    <div class="mainTitleTextFrame">
+      <div class="mainTitleFrame">
+        ENVIRONMENT<br/>
+        ILLUSTRATION
+      </div>
+      <div class="mainTitlebutton">
+        see in GALLERY
+      </div>
+    </div>
+  </div>
+  <div class="clear">
+  </div>
+</body>
+</html>
