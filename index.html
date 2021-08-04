@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset = "UTF-8" >
-  <meta name = "viewport" content = "width=device-width initial-scale=1.0">
+  <meta name = "viewport" content = "width=device-width initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <title>
     Homepage Mitsunoryw
   </title>
@@ -17,58 +17,153 @@
     margin : 0px;
     background-position : right top;
     background-size : cover;
+    background-color : black;
   }
   .navigationBar{
+    width : 100%;
+    height : max(calc(20px + 100vw),100%);
     display : flex;
+    flex-direction : column;
     justify-content : space-between;
-    padding : 50px;
   }
   .mainLogoContainer{
-    width : 200px;
+    margin-top : 2vw;
   }
-  .menuContainer{
-    color : white;
-    display : flex;
-    justify-content : flex-end;
-  }
-  .menuButton, .terminalInputContainer{
-    margin : auto 70 0;
+  .menuButton{
+    display : block;
+    border : none;
+    text-align : left;
+    width : 100vw;
+    height : 20vw;
+    margin-bottom : 1vw;
+    background : white;
     font-family : "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size : 5vw;
+    font-weight : 200;
+    padding-left : 5vw;
+    padding-top : 0vw;
+  }
+  .menuButton:active{
+    color : white;
+    background-color : transparent;
+  }
+  .menuButtonAnnotate{
+    font-size : 3vw;
+  }
+  .terminalInputContainer{
+    display : none;
   }
   .mainTitleContainer{
-    width : 200px;
-    height : 200px;
-    position : absolute;
-    left : 10%;
-    bottom: 20%;
-    display : flex;
     color : white;
+    width : 55vw;
+    height : 16vw;
+    position : absolute;
+    bottom : min(95vw,calc(100% - 200px));
+    left : 12vw;
+    display : flex;
+    justify-content : space-between;
+  }
+  #mainTitleLogo{
+    height : 100%;
+    width : auto;
+    object-fit : scale-down;
   }
   .mainTitleTextFrame{
-    margin-left : 20px;
-    vertical-align : top;
     font-family : "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size : 3vw;
+    font-weight : 200;
   }
   .mainTitleFrame{
-      font-family : "Palatino Linotype", "Book Antiqua", Palatino, serif;
-      font-size : 65px;
+    font-family : "Times New Roman", serif;
+    font-size : 5vw;
+    font-weight : 100;
+  }
+  @media screen and (min-width: 768px){
+    .navigationBar{
+      width : 100%;
+      height : auto;
+      display : flex;
+      flex-direction : row;
+      justify-content : space-between;
+      padding-top : 20px;
     }
+    .mainLogoContainer{
+      width : 10vw;
+      margin : 0vw
+    }
+    .menuContainer{
+      width : min(700px, calc(100% - 300px));
+      color : white;
+      display : flex;
+      justify-content : space-around;
+    }
+    .menuButton, .terminalInputContainer{
+      display : block;
+      color : white;
+      width : auto;
+      height : auto;
+      margin : auto 0 0;
+      background : transparent;
+      font-family : "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-size : 16px;
+      padding : 0px;
+    }
+    .menuButton:hover {
+      color : #EB9EBB;
+    }
+    .menuButtonAnnotate{
+      display : none;
+    }
+    .mainTitleContainer{
+      width : 33vw;
+      height : 10vw;
+      position : absolute;
+      left : 10%;
+      bottom: min(20%, calc(100% - 10vw - 100px));
+      display : flex;
+      justify-content : space-between;
+      color : white;
+    }
+    #mainTitleLogo{
+      height : 100%;
+      width : auto;
+      object-fit : scale-down;
+    }
+    .mainTitleTextFrame{
+      vertical-align : top;
+      font-size : 1vw;
+    }
+    .mainTitleFrame{
+      font-family : "Times New Roman", serif;
+      font-size : 3vw;
+      font-weight : Lighter;
+    }
+  }
 </style>
-<body background = "/resources/background.jpg">
+<body background = "/siteResources/background.png">
   <div class="navigationBar">
     <div class="mainLogoContainer">
-      <img src="resources/mainLogo.png" alt="" width="200px">
+      <img src="siteResources/mainLogo.png" alt="" width="200px">
     </div>
     <div class="menuContainer">
-      <div class="menuButton" id="gallery">
-        GALLERY
-      </div>
-      <div class="menuButton" id="resources">
+      <button class="menuButton" id="gallery">
+          GALLERY
+        <div class="menuButtonAnnotate">
+          Check the Best of My Works
+        </div>
+      </button>
+      <button class="menuButton" id="resources">
         RESOURCES
-      </div>
-      <div class="menuButton" id="contact">
+        <div class="menuButtonAnnotate">
+          Download Free Contents
+        </div>
+      </button>
+      <button class="menuButton" id="contact">
         CONTACT
-      </div>
+        <div class="menuButtonAnnotate">
+          Get in Touch with Me
+        </div>
+      </button>
       <div class="terminalInputContainer">
         <input type="text" name="terminalInput" value="" style = "border-radius: 10px;">
       </div>
@@ -76,7 +171,7 @@
   </div>
   <div class="mainTitleContainer">
     <div class="mainTitleLogoContainer">
-      <img src="resources/illustrationLogo.png" alt="" width="200px">
+      <img src="siteResources/illustrationLogo.png" alt="" id="mainTitleLogo">
     </div>
     <div class="mainTitleTextFrame">
       <div class="mainTitleFrame">

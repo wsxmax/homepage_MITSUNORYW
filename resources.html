@@ -1,0 +1,141 @@
+<! doctype html>
+<html>
+<head>
+  <meta charset = "UTF-8" >
+  <meta name = "viewport" content = "width=device-width initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>
+    Homepage Mitsunoryw
+  </title>
+</head>
+<style>
+  html{
+    height : 100%;
+  }
+  body{
+    width : 100%;
+    height : 100%;
+    margin : 0px;
+    background-position : right top;
+    background-size : cover;
+    background-color : black;
+  }
+  .navigationBar{
+    width : 100%;
+    height : max(calc(20px + 100vw),100%);
+    display : flex;
+    flex-direction : column;
+    justify-content : space-between;
+  }
+  .mainLogoContainer{
+    margin-top : 2vw;
+  }
+  .menuButton{
+    display : block;
+    border : none;
+    text-align : left;
+    width : 100vw;
+    height : 20vw;
+    margin-bottom : 1vw;
+    background : white;
+    font-family : "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size : 5vw;
+    font-weight : 200;
+    padding-left : 5vw;
+    padding-top : 0vw;
+  }
+  .menuButton:active{
+    color : white;
+    background-color : transparent;
+  }
+  .menuButtonAnnotate{
+    font-size : 3vw;
+  }
+  .terminalInputContainer{
+    display : none;
+  }
+  @media screen and (min-width: 768px){
+    .navigationBar{
+      width : 100%;
+      height : auto;
+      display : flex;
+      flex-direction : row;
+      justify-content : space-between;
+      padding-top : 20px;
+    }
+    .mainLogoContainer{
+      width : 10vw;
+      margin : 0vw
+    }
+    .menuContainer{
+      width : min(700px, calc(100% - 300px));
+      color : white;
+      display : flex;
+      justify-content : space-around;
+    }
+    .menuButton, .terminalInputContainer{
+      display : block;
+      color : white;
+      width : auto;
+      height : auto;
+      margin : auto 0 0;
+      background : transparent;
+      font-family : "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-size : 16px;
+      padding : 0px;
+    }
+    .menuButton:hover {
+      color : #EB9EBB;
+    }
+    .menuButtonAnnotate{
+      display : none;
+    }
+    .pageContentContainer{
+      background : white;
+      margin-top : 100px;
+      margin-left : 50px;
+      margin-right : 50px;
+      height : max(calc(100% - 300px),300px);
+    }
+    .pageContentItem{
+      height : max(calc(100vh - 300px),300px);
+      width : max(calc(100vh - 300px),300px);
+    }
+  }
+</style>
+<body background = "/siteResources/background.png">
+  <div class="navigationBar">
+    <div class="mainLogoContainer">
+      <img src="siteResources/mainLogo.png" alt="" width="200px">
+    </div>
+    <div class="menuContainer">
+      <button class="menuButton" id="gallery">
+          GALLERY
+        <div class="menuButtonAnnotate">
+          Check the Best of My Works
+        </div>
+      </button>
+      <button class="menuButton" id="resources">
+        RESOURCES
+        <div class="menuButtonAnnotate">
+          Download Free Contents
+        </div>
+      </button>
+      <button class="menuButton" id="contact">
+        CONTACT
+        <div class="menuButtonAnnotate">
+          Get in Touch with Me
+        </div>
+      </button>
+      <div class="terminalInputContainer">
+        <input type="text" name="terminalInput" value="" style = "border-radius: 10px;">
+      </div>
+    </div>
+  </div>
+  <div class="pageContentContainer">
+    <iframe src="/resources/sample/page.html" class="pageContentItem" frameborder="0" scrolling="0">
+    </iframe>
+  </div>
+  <div class="clear">
+  </div>
+</body>
+</html>
