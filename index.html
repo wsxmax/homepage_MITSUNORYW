@@ -30,6 +30,7 @@
     margin-top : 2vw;
   }
   .menuButton{
+    text-decoration: none;
     display : block;
     border : none;
     text-align : left;
@@ -40,6 +41,7 @@
     font-family : "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-size : 5vw;
     font-weight : 200;
+    color: black;
     padding-left : 5vw;
     padding-top : 0vw;
   }
@@ -98,6 +100,7 @@
       justify-content : space-around;
     }
     .menuButton, .terminalInputContainer{
+      text-decoration: none;
       display : block;
       color : white;
       width : auto;
@@ -109,7 +112,7 @@
       padding : 0px;
     }
     .menuButton:hover {
-      color : #EB9EBB;
+      color : #B0C4DE;
     }
     .menuButtonAnnotate{
       display : none;
@@ -140,30 +143,30 @@
     }
   }
 </style>
-<body background = "siteResources/background.png">
+<body background = "siteResources/backgroundAlt.png">
   <div class="navigationBar">
     <div class="mainLogoContainer">
       <img src="siteResources/mainLogo.png" alt="" width="200px">
     </div>
     <div class="menuContainer">
-      <button class="menuButton" id="gallery">
+      <a class="menuButton" id="gallery" href="gallery.html">
           GALLERY
         <div class="menuButtonAnnotate">
           Check the Best of My Works
         </div>
-      </button>
-      <button class="menuButton" id="resources">
+      </a>
+      <a class="menuButton" id="resources" href="resources.html">
         RESOURCES
         <div class="menuButtonAnnotate">
           Download Free Contents
         </div>
-      </button>
-      <button class="menuButton" id="contact">
+      </a>
+      <a class="menuButton" id="contact" href="contact.html">
         CONTACT
         <div class="menuButtonAnnotate">
           Get in Touch with Me
         </div>
-      </button>
+      </a>
       <div class="terminalInputContainer">
         <input type="text" name="terminalInput" value="" style = "border-radius: 10px;">
       </div>
